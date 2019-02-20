@@ -33,7 +33,7 @@ HUGO_PACKAGE=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
   echo "\n-----> Fetching Hugo ${HUGO_VERSION} binaries at ${HUGO_PACKAGE}"
-  curl $HUGO_PACKAGE -L -J -o $CACHE_DIR/ | indent
+  curl $HUGO_PACKAGE -L -J -o $CACHE_DIR/$FILE_NAME | indent
 fi
 
 # Extract the binary in the working directory
